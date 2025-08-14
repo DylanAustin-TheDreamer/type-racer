@@ -11,7 +11,7 @@
 <body>
     <section class="nav-bar">
         <nav class="navigation">TypeRacer
-        <button style="width: auto; border-radius: 5px; border: none; font-weight: normal; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);">Intructions</button>
+        <button style="width: auto; border-radius: 5px; border: none; font-weight: normal; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" id="openModalBtn">Intructions</button>
         </nav>
     </section>
     
@@ -50,6 +50,52 @@
  </section>
 </section>
 
+<!-- For the results section -->
+<section style="display: flex; align-items: center; justify-content: center;">
+    <div class="results">
+        </div>
+</section>
+<!-- End of results section -->
+
+<!-- For the modal -->
+ <div id="myModal" class="modal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Instructions for TypeRacer!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Welcome to TypeRacer!</p>
+        <p>Here you can test your typing speed and improve your skills. At the bottom of the text input area, there are buttons for - Start, Stop and retry.
+            if you want to restart the test, simply click on the "Retry" button. Once the game has started, you need to type in the text input area and press stop when you are done.
+            your score will be calculated and you will be given advice for how to increase your score.</p>
+        <p>At the top of the page, you can select the difficulty level for the test. if you can master the easier difficulties, you can move on to the harder ones, and truly develop your speed.</p>
+        <p>
+            Good Luck!
+            </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End of modal -->
+
+
+<!-- JavaScript to activate modal -->
+<script>
+document.getElementById('openModalBtn').addEventListener('click', function () {
+  var myModal = new bootstrap.Modal(document.getElementById('myModal'));
+  myModal.show();
+});
+</script>
+
+<!-- Bootstrap JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+<!-- My JavaScript -->
+<script src="assets/javascript/script.js"></script>
 </body>
 </html>

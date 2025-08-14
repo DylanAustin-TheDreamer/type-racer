@@ -36,3 +36,12 @@ button{
     font-size: large;
     font-weight: 500;
 }
+
+.results{
+    border-radius: 5px;
+    border: solid 5px orange;
+    box-shadow: 0 4px 8px orange;
+    width: 75%;
+    height: 200px;
+    margin: 0;
+}
