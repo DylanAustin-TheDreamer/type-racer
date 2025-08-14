@@ -21,7 +21,7 @@
     <section style="padding: 5%; padding-top: 10%;">
     <div class="input-group mb-3" style="box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);">
   <label class="input-group-text" for="inputGroupSelect01">Select Difficulty</label>
-  <select class="form-select" id="inputGroupSelect01">
+  <select class="form-select" id="inputGroupSelect01" id="difficulty-select">
     <option selected>Choose...</option>
     <option value="1">Easy</option>
     <option value="2">Medium</option>
@@ -40,15 +40,15 @@
     </div>
 
 <div class="input-group" style="height: 200px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);">
-  <textarea class="form-control" aria-label="With textarea" placeholder="Click here to start the test!"></textarea>
+  <textarea  id="typing-input" class="form-control" aria-label="With textarea" placeholder="Click here to start the test!"></textarea>
 </div>
 <!-- End of bootstrap form -->
 
 <!-- Here is the section for my buttons -->
  <section class="button-container">
-        <button class="btn btn-primary" style="box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);">Start</button>
-        <button class="btn btn-secondary" style="box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);">Stop</button>
-        <button class="btn btn-secondary" style="box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);">Retry</button>
+        <button id="startBtn" class="btn btn-primary" style="box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);">Start</button>
+        <button id="stopBtn" class="btn btn-secondary" style="box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);">Stop</button>
+        <button id="retryBtn" class="btn btn-secondary" style="box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);">Retry</button>
  </section>
 </section>
 <!-- End of button section -->
