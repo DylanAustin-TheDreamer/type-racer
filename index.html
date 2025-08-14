@@ -9,11 +9,13 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <!-- Navigation Bar -->
     <section class="nav-bar">
         <nav class="navigation">TypeRacer
         <button style="width: auto; border-radius: 5px; border: none; font-weight: normal; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" id="openModalBtn">Intructions</button>
         </nav>
     </section>
+    <!-- End of navigation bar -->
     
     <!-- Beginning of bootstrap form -->
     <section style="padding: 5%; padding-top: 10%;">
@@ -28,12 +30,12 @@
 </div>
 
 <section>
-    <p style="font-weight: 500; font-size: larger;">Test your typing speed by typing the text shown below</p>
+    <p style="font-weight: 400; font-size: larger; color: darkslategrey;">Test your typing speed by typing the text shown below</p>
     </section>
 
 <div class="input-group" style="padding-bottom: 5%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);">
     <div class="form-control" style="border-radius: 0%;">
-    <p id="text-to-type" style="padding-top: 15px;">The Cat sat on the mat!</p>
+    <p id="text-to-type" class="nicer-bold" style="padding-top: 15px; font-weight: 600 !important;">The Cat sat on the mat!</p>
     </div>
     </div>
 
@@ -49,6 +51,7 @@
         <button class="btn btn-secondary" style="box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);">Retry</button>
  </section>
 </section>
+<!-- End of button section -->
 
 <!-- For the results section -->
 <section style="display: flex; align-items: center; justify-content: center;">
@@ -101,5 +104,7 @@ document.getElementById('openModalBtn').addEventListener('click', function () {
 
 <!-- My JavaScript -->
 <script src="assets/javascript/script.js"></script>
+<!-- End of JavaScripts -->
+
 </body>
 </html>

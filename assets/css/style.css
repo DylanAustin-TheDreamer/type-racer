@@ -46,3 +46,13 @@ button{
     margin: 0;
     text-align: center;
 }
+
+strong{
+    font-weight: 650;
+    color: darkslategrey;
+}
+
+.nicer-bold{
+    font-weight: 650;
+    color: darkslategrey;
+}
