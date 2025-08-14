@@ -15,12 +15,29 @@ startBtn.addEventListener('click', startTest);
 stopBtn.addEventListener('click', stopTest);
 retryBtn.addEventListener('click', retryTest);
 
+checkDifficulty();
+difficultySelect.addEventListener('change', checkDifficulty);
+
 function checkDifficulty(){
     // Check the selected difficulty level
+    let difficulty = difficultySelect.value;
+    if (difficulty === 'easy') {
+        textToType.innerText = "The tired cat sat on the mat.";
+    } else if (difficulty === 'medium') {
+        textToType.innerText = "The tired cat sat on the mat. He reached for his hat, then gave his head a pat.";
+    } else if (difficulty === 'hard') {
+        textToType.innerText = "The tired cat sat on the mat. He reached for his hat, then gave his head a pat. He gave up his struggle, dealing with his world of trouble. He licked his lap and fell into a celestial nap.";
+    }
+    else {
+        textToType.innerText = "Please select a difficulty level.";
+    }
 }
 
 function startTest(){
     // Start the typing test
+
+    // Reset the input field
+    typingInput.value = '';
 }
 
 function stopTest(){
