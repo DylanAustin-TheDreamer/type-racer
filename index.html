@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+
     <!-- Navigation Bar -->
     <section class="nav-bar">
         <nav class="navigation">TypeRacer
@@ -16,13 +17,16 @@
         </nav>
     </section>
     <!-- End of navigation bar -->
+
+    <!-- Container for the entire page -->
+    <div class="container">
     
     <!-- Beginning of bootstrap form -->
     <section style="padding: 5%; padding-top: 10%;">
     <div class="input-group mb-3" style="box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);">
   <label class="input-group-text" for="inputGroupSelect01">Select Difficulty</label>
   <select class="form-select" id="difficulty-select">
-    <option selected>Choose...</option>
+    <option value="none" selected>Choose...</option>
     <option value="easy">Easy</option>
     <option value="medium">Medium</option>
     <option value="hard">Hard</option>
@@ -77,7 +81,7 @@
         <p>Here you can test your typing speed and improve your skills. At the bottom of the text input area, there are buttons for: <strong>Start, Stop</strong> and <strong>Retry</strong>.
             if you want to restart the test, simply click on the '<strong>Retry</strong>' button.</p> <p> Once the game has started, you need to type in the text input area and press <strong>Stop</strong> when you are done.
             your score will be calculated and you will be given advice for how to increase your score.</p>
-        <p>At the top of the page, you can select the difficulty level for the test. if you can master the easier difficulties, you can move on to the harder ones, and truly develop your speed and efficiency.</p>
+        <p>At the top of the page, you can select the difficulty level for the test. if you can master the easier difficulties, you can move on to the harder ones and truly develop your speed and efficiency.</p>
         <p>
             Good Luck!
             </p>
@@ -90,6 +94,8 @@
 </div>
 <!-- End of modal -->
 
+</div>
+<!-- End of container -->
 
 <!-- JavaScript to activate modal -->
 <script>

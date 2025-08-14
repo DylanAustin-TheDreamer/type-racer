@@ -56,3 +56,65 @@ strong{
     font-weight: 650;
     color: darkslategrey;
 }
+
+@media (min-width: 768px){
+   .navigation {
+        font-size: large;
+    }
+    .button-container {
+        flex-direction: row;
+        align-items: center;
+    }
+    button {
+        width: 25%;
+        height: 50px;
+    }
+
+    .container {
+        width: 75%;
+    }
+
+    .navigation{
+        font-size: 34px;
+    } 
+}
+
+@media (min-width: 1024px) {
+    .navigation {
+        font-size: large;
+    }
+    .button-container {
+        flex-direction: row;
+        align-items: center;
+    }
+    button {
+        width: 25%;
+        height: 50px;
+    }
+
+    .container {
+        width: 65%;
+    }
+
+    .navigation{
+        font-size: 34px;
+    }
+}
+
+@media (min-width: 1440px){
+    .container {
+        width: 60%;
+    }
+
+    .navigation{
+        font-size: 52px;
+    }
+
+    p{
+        font-size: 22px;
+    }
+
+    h1, h2, h3, h4, h5, h6{
+        font-size: 36px;
+    }
+}
