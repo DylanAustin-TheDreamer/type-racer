@@ -9,6 +9,9 @@ const typingInput = document.getElementById('typing-input');
 typingInput.addEventListener('paste', function(e) {
     e.preventDefault();
 });
+typingInput.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+});
 
 //for the results field
 const typingSpeed = document.getElementById('typing-speed');
