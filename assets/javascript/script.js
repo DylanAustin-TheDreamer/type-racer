@@ -134,7 +134,57 @@ function retryTest(){
 }
 
 function certificate(){
-    // Generate a certificate for the user
-    let certificateText = "Congratulations! You've completed the typing test with flying colors.";
-    alert(certificateText);
+    // Show the certificate modal for name entry
+    var certModal = new bootstrap.Modal(document.getElementById('certificateModal'));
+    certModal.show();
+}
+
+// Handle certificate form submission and PDF download
+document.addEventListener('DOMContentLoaded', function() {
+    const certForm = document.getElementById('certificateForm');
+    if (certForm) {
+        certForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const firstName = document.getElementById('firstName').value.trim();
+            const lastName = document.getElementById('lastName').value.trim();
+            const userName = firstName + ' ' + lastName;
+            const wpm = typingSpeed.innerText;
+            const accuracy = typingAccuracy.innerText;
+            const efficiency = typingEfficiency.innerText;
+
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            doc.setFontSize(22);
+            doc.text('TypeRacer Certificate', 20, 30);
+            doc.setFontSize(16);
+            doc.text(`Congratulations, ${userName}!`, 20, 50);
+            doc.text(`WPM: ${wpm}`, 20, 65);
+            doc.text(`Accuracy: ${accuracy}%`, 20, 75);
+            doc.text(`Efficiency: ${efficiency}%`, 20, 85);
+            doc.text("You've completed the typing test with flying colors!", 20, 100);
+
+            doc.save('TypeRacer_Certificate.pdf');
+
+            // Hide modal after download
+            var certModal = bootstrap.Modal.getInstance(document.getElementById('certificateModal'));
+            certModal.hide();
+        });
+    }
+});
+
+function downloadCertificate(userName, wpm, accuracy, efficiency) {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
+    doc.setFontSize(22);
+    doc.text("TypeRacer Certificate", 20, 30);
+    doc.setFontSize(16);
+    doc.text(`Congratulations, ${userName}!`, 20, 50);
+    doc.text(`WPM: ${wpm}`, 20, 65);
+    doc.text(`Accuracy: ${accuracy}%`, 20, 75);
+    doc.text(`Efficiency: ${efficiency}%`, 20, 85);
+    doc.text("You've completed the typing test with flying colors!", 20, 100);
+
+    doc.save("TypeRacer_Certificate.pdf");
 }

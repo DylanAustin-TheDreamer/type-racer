@@ -68,7 +68,33 @@
 </section>
 <!-- End of results section -->
 
-<!-- For the modal -->
+<!-- Certificate Modal -->
+<div id="certificateModal" class="modal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: #ff8400;">
+        <h5 class="modal-title" style="color: whitesmoke;">Download Certificate</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="certificateForm">
+          <div class="mb-3">
+            <label for="firstName" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="firstName" required>
+          </div>
+          <div class="mb-3">
+            <label for="lastName" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="lastName" required>
+          </div>
+          <button type="submit" class="btn btn-primary" id="downloadCertBtn">Download Certificate</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Certificate Modal -->
+
+<!-- For the instructions modal -->
  <div id="myModal" class="modal" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -92,7 +118,7 @@
     </div>
   </div>
 </div>
-<!-- End of modal -->
+<!-- End of instructions modal -->
 
 </div>
 <!-- End of container -->
@@ -106,10 +132,15 @@ document.getElementById('openModalBtn').addEventListener('click', function () {
 </script>
 
 <!-- Bootstrap JavaScript -->
+<!-- jsPDF Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 
 <!-- My JavaScript -->
 <script src="assets/javascript/script.js"></script>
+
+<!-- JsPDF -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <!-- End of JavaScripts -->
 
 </body>
