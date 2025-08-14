@@ -10,7 +10,10 @@ const typingSpeed = document.getElementById('typing-speed');
 const typingAccuracy = document.getElementById('typing-accuracy');
 const typingEfficiency = document.getElementById('typing-efficiency');
 
-
+//set up the event listeners
+startBtn.addEventListener('click', startTest);
+stopBtn.addEventListener('click', stopTest);
+retryBtn.addEventListener('click', retryTest);
 
 function checkDifficulty(){
     // Check the selected difficulty level
@@ -22,9 +25,17 @@ function startTest(){
 
 function stopTest(){
     // Stop the typing test
+    //gather input
+    let userInput = typingInput.value;
+    let correctText = textToType.innerText;
+
+    //gather time taken
+    let endTime = new Date();
+    let timeTaken = (endTime - startTime) / 1000; // in seconds
+    calculateScore(timeTaken);
 }
 
-function calculateScore(){
+function calculateScore(timeTaken){
     // Calculate the user's typing speed and accuracy
 }
 
